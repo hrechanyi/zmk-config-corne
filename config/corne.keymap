@@ -10,18 +10,18 @@
 
 / {
     behaviors {
-        lower_or_system: lower_or_system {
+        symbols_or_media: symbols_or_media {
             compatible = "zmk,behavior-tap-dance";
-            label = "LOWER_OR_SYSTEM";
+            label = "SYMBOLS_OR_MEDIA";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 3>;
 
             tapping-term-ms = <150>;
         };
 
-        raise_or_system: raise_or_system {
+        navigation_or_media: navigation_or_media {
             compatible = "zmk,behavior-tap-dance";
-            label = "RAISE_OR_SYSTEM";
+            label = "NAVIGATION_OR_MEDIA";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&mo 3>;
 
@@ -82,10 +82,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE           &kp Q  &kp W  &kp E                         &kp R             &kp T        &kp Y    &kp U             &kp I          &kp O    &kp P     &kp BACKSLASH
-&kp TAB              &kp A  &kp S  &kp D                         &kp F             &kp G        &kp H    &kp J             &kp K          &kp L    &kp SEMI  &kp SQT
-&left_shift_or_caps  &kp Z  &kp X  &kp C                         &kp V             &kp B        &kp N    &kp M             &kp COMMA      &kp DOT  &kp FSLH  &right_shift_or_caps
-                                   &kp LS(LA(LC(LEFT_COMMAND)))  &lower_or_system  &kp SPACE    &kp RET  &raise_or_system  &kp BACKSPACE
+&kp ESCAPE           &kp Q  &kp W  &kp E  &kp R              &kp T        &kp Y    &kp U                 &kp I          &kp O    &kp P     &kp BACKSLASH
+&kp TAB              &kp A  &kp S  &kp D  &kp F              &kp G        &kp H    &kp J                 &kp K          &kp L    &kp SEMI  &kp SQT
+&left_shift_or_caps  &kp Z  &kp X  &kp C  &kp V              &kp B        &kp N    &kp M                 &kp COMMA      &kp DOT  &kp FSLH  &right_shift_or_caps
+                                   &mo 4  &symbols_or_media  &kp SPACE    &kp RET  &navigation_or_media  &kp BACKSPACE
             >;
 
             label = "Base";
@@ -102,7 +102,7 @@
             label = "Symbols";
         };
 
-        numpad_and_nav_layer {
+        navigation_layer {
             bindings = <
 &none  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS        &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &none
 &none  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS       &none   &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
@@ -110,7 +110,7 @@
                                    &trans        &trans        &trans          &trans  &trans    &trans
             >;
 
-            label = "Numpad and Nav";
+            label = "Navigation";
         };
 
         media_layer {
