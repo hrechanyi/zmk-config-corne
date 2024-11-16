@@ -9,6 +9,22 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        lower_or_system: lower_or_system {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LOWER_OR_SYSTEM";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&none>, <&mo 3>;
+        };
+
+        raise_or_system: raise_or_system {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RAISE_OR_SYSTEM";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&none>, <&mo 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -20,10 +36,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I          &kp O    &kp P     &kp BACKSLASH
-&kp TAB     &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp BACKSPACE
+&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R             &kp T        &kp Y    &kp U             &kp I          &kp O    &kp P     &kp BACKSLASH
+&kp TAB     &kp A  &kp S  &kp D     &kp F             &kp G        &kp H    &kp J             &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X  &kp C     &kp V             &kp B        &kp N    &kp M             &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                          &kp LGUI  &lower_or_system  &kp SPACE    &kp RET  &raise_or_system  &kp BACKSPACE
             >;
 
             label = "Base";
