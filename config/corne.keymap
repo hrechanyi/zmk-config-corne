@@ -14,14 +14,23 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LOWER_OR_SYSTEM";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&none>, <&mo 3>;
+            bindings = <&mo 1>, <&mo 1>, <&mo 3>;
         };
 
         raise_or_system: raise_or_system {
             compatible = "zmk,behavior-tap-dance";
             label = "RAISE_OR_SYSTEM";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&none>, <&mo 3>;
+            bindings = <&mo 2>, <&mo 2>, <&mo 3>;
+        };
+
+        hold_tap_key: hold_tap_key {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_KEY";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -36,10 +45,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R             &kp T        &kp Y    &kp U             &kp I          &kp O    &kp P     &kp BACKSLASH
-&kp TAB     &kp A  &kp S  &kp D     &kp F             &kp G        &kp H    &kp J             &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z  &kp X  &kp C     &kp V             &kp B        &kp N    &kp M             &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                          &kp LGUI  &lower_or_system  &kp SPACE    &kp RET  &raise_or_system  &kp BACKSPACE
+&kp ESCAPE  &kp Q  &kp W                         &kp E                     &kp R                         &kp T        &kp Y    &kp U                          &kp I                      &kp O                          &kp P     &kp BACKSLASH
+&kp TAB     &kp A  &hold_tap_key LEFT_CONTROL S  &hold_tap_key LEFT_ALT D  &hold_tap_key LEFT_COMMAND F  &kp G        &kp H    &hold_tap_key RIGHT_COMMAND J  &hold_tap_key RIGHT_ALT K  &hold_tap_key RIGHT_CONTROL L  &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z  &kp X                         &kp C                     &kp V                         &kp B        &kp N    &kp M                          &kp COMMA                  &kp DOT                        &kp FSLH  &kp RIGHT_SHIFT
+                                                 &kp LGUI                  &lower_or_system              &kp SPACE    &kp RET  &raise_or_system               &kp BACKSPACE
             >;
 
             label = "Base";
