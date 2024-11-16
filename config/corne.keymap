@@ -35,11 +35,11 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 7 8 9 10 11 23 22 21 20 19 18 30 31 32 33 34 35 39 40 41 36 37 38>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <175>;
         };
 
         home_row_mod_right: home_row_mod_right {
@@ -49,11 +49,11 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            require-prior-idle-ms = <125>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <150>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <175>;
         };
 
         left_shift_or_caps: left_shift_or_caps {
