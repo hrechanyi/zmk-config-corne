@@ -15,8 +15,6 @@
             label = "LOWER_OR_SYSTEM";
             #binding-cells = <0>;
             bindings = <&mo 1>, <&mo 1>, <&mo 3>;
-
-            tapping-term-ms = <50>;
         };
 
         raise_or_system: raise_or_system {
@@ -24,8 +22,6 @@
             label = "RAISE_OR_SYSTEM";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&mo 2>, <&mo 3>;
-
-            tapping-term-ms = <50>;
         };
 
         hold_tap_key: hold_tap_key {
@@ -34,8 +30,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <10>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
         };
     };
 
