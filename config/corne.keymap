@@ -68,10 +68,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q                              &kp W                          &kp E                              &kp R                            &kp T        &kp Y    &kp U                              &kp I                                &kp O                            &kp P                                        &kp MINUS
-&kp TAB     &home_row_mod_left LEFT_CONTROL A  &home_row_mod_left LEFT_ALT S  &home_row_mod_left LEFT_COMMAND D  &home_row_mod_left LEFT_SHIFT F  &kp G        &kp H    &home_row_mod_right RIGHT_SHIFT J  &home_row_mod_right RIGHT_COMMAND K  &home_row_mod_right RIGHT_ALT L  &home_row_mod_right RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp GRAVE   &kp Z                              &kp X                          &kp C                              &kp V                            &kp B        &kp N    &kp M                              &kp COMMA                            &kp DOT                          &kp FSLH                                     &kp BACKSLASH
-                                                                              &kp LS(LA(LC(LEFT_COMMAND)))       &lower_or_system                 &kp SPACE    &kp RET  &raise_or_system                   &kp BACKSPACE
+&kp ESCAPE  &kp Q                            &kp W                              &kp E                          &kp R                              &kp T        &kp Y    &kp U                                &kp I                            &kp O                                &kp P                                      &kp MINUS
+&kp TAB     &home_row_mod_left LEFT_SHIFT A  &home_row_mod_left LEFT_CONTROL S  &home_row_mod_left LEFT_ALT D  &home_row_mod_left LEFT_COMMAND F  &kp G        &kp H    &home_row_mod_right RIGHT_COMMAND J  &home_row_mod_right RIGHT_ALT K  &home_row_mod_right RIGHT_CONTROL L  &home_row_mod_right RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp GRAVE   &kp Z                            &kp X                              &kp C                          &kp V                              &kp B        &kp N    &kp M                                &kp COMMA                        &kp DOT                              &kp FSLH                                   &kp BACKSLASH
+                                                                                &kp LS(LA(LC(LEFT_COMMAND)))   &lower_or_system                   &kp SPACE    &kp RET  &raise_or_system                     &kp BACKSPACE
             >;
 
             label = "Base";
