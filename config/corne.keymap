@@ -78,10 +78,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q                            &kp W                              &kp E                          &kp R                              &kp T        &kp Y    &kp U                                &kp I                            &kp O                                &kp P                                 &kp MINUS
-&kp TAB     &home_row_mod_left LEFT_SHIFT A  &home_row_mod_left LEFT_CONTROL S  &home_row_mod_left LEFT_ALT D  &home_row_mod_left LEFT_COMMAND F  &kp G        &kp H    &home_row_mod_right RIGHT_COMMAND J  &home_row_mod_right RIGHT_ALT K  &home_row_mod_right RIGHT_CONTROL L  &home_row_mod_right RIGHT_SHIFT SEMI  &kp SQT
-&kp GRAVE   &kp Z                            &kp X                              &kp C                          &kp V                              &kp B        &kp N    &kp M                                &kp COMMA                        &kp DOT                              &kp FSLH                              &kp BACKSLASH
-                                                                                &kp LS(LA(LC(LEFT_COMMAND)))   &symbols_or_media                  &kp SPACE    &kp RET  &navigation_or_media                 &kp BACKSPACE
+&kp ESCAPE  &kp Q  &kp W  &kp E                         &kp R              &kp T        &kp Y    &kp U                 &kp I          &kp O    &kp P          &kp MINUS
+&kp TAB     &kp A  &kp S  &kp D                         &kp F              &kp G        &kp H    &kp J                 &kp K          &kp L    &kp SEMICOLON  &kp SQT
+&kp GRAVE   &kp Z  &kp X  &kp C                         &kp V              &kp B        &kp N    &kp M                 &kp COMMA      &kp DOT  &kp FSLH       &kp BACKSLASH
+                          &kp LS(LA(LC(LEFT_COMMAND)))  &symbols_or_media  &kp SPACE    &kp RET  &navigation_or_media  &kp BACKSPACE
             >;
 
             label = "Base";
@@ -118,6 +118,15 @@
             >;
 
             label = "Media";
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
