@@ -102,7 +102,7 @@
             label = "Symbols";
         };
 
-        navigation_layer {
+        numpad_layer {
             bindings = <
 &none  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS        &none   &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &none
 &none  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS       &none   &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
@@ -110,7 +110,7 @@
                                    &trans        &trans        &trans          &trans  &trans    &trans
             >;
 
-            label = "Navigation";
+            label = "Numpad";
         };
 
         media_layer {
