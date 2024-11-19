@@ -38,7 +38,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
         };
 
         hrm_right: hrm_right {
@@ -51,7 +51,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-unless-interrupted";
         };
     };
 
