@@ -42,7 +42,7 @@
         esc_combo {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-            layers = <0 1 2>;
+            layers = <0 2 1>;
         };
     };
 
@@ -66,17 +66,6 @@
             label = "Base";
         };
 
-        numpad_layer {
-            bindings = <
-&kp TAB           &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS        &none      &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &none
-&kp LEFT_CONTROL  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS       &none      &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
-&LS_CAPS          &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0    &none      &none     &none          &none         &none      &kp RIGHT_ALT
-                                              &kp LEFT_GUI  &trans        &kp SPACE       &kp ENTER  &trans    &kp BACKSPACE
-            >;
-
-            label = "Numpad";
-        };
-
         symbols_layer {
             bindings = <
 &kp TAB           &kp CARET        &kp HASH     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AMPERSAND  &kp PIPE      &none
@@ -86,6 +75,17 @@
             >;
 
             label = "Symbols";
+        };
+
+        numpad_layer {
+            bindings = <
+&kp TAB           &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS        &none      &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &none
+&kp LEFT_CONTROL  &kp SLASH     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS       &none      &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &none
+&LS_CAPS          &kp EQUAL     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0    &none      &none     &none          &none         &none      &kp RIGHT_ALT
+                                              &kp LEFT_GUI  &trans        &kp SPACE       &kp ENTER  &trans    &kp BACKSPACE
+            >;
+
+            label = "Numpad";
         };
 
         media_layer {
