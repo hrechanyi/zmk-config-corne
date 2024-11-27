@@ -44,11 +44,6 @@
             key-positions = <0 1>;
             layers = <0 2 1>;
         };
-
-        SYSTEM_LAYER {
-            bindings = <&mo 3>;
-            key-positions = <37 40>;
-        };
     };
 
     keymap {
