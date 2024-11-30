@@ -40,7 +40,8 @@
             label = "SK500";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <3000>;
+            release-after-ms = <500>;
+            ignore-modifiers;
         };
     };
 
