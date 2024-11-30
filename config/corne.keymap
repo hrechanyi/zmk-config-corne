@@ -32,7 +32,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LS_CAPS";
             #binding-cells = <0>;
-            bindings = <&sk LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&SKQR LEFT_SHIFT>, <&kp CAPS>;
         };
 
         SK500: SK500 {
@@ -41,6 +41,16 @@
             bindings = <&kp>;
             #binding-cells = <1>;
             release-after-ms = <500>;
+            ignore-modifiers;
+        };
+
+        SKQR: SKQR {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SKQR";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <1000>;
+            quick-release;
             ignore-modifiers;
         };
     };
