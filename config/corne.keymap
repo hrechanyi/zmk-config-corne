@@ -38,7 +38,7 @@
         SK500: SK500 {
             compatible = "zmk,behavior-sticky-key";
             label = "SK500";
-            bindings = <&kp>;
+            bindings = <&sk>;
             #binding-cells = <1>;
             release-after-ms = <500>;
         };
