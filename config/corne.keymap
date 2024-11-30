@@ -45,6 +45,20 @@
             layers = <0 2 1>;
             timeout-ms = <50>;
         };
+
+        combo_hyper_left {
+            bindings = <&sk LS(LA(LC(LEFT_GUI)))>;
+            key-positions = <28 29>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        combo_hyper_right {
+            bindings = <&sk RS(RA(RC(RIGHT_GUI)))>;
+            key-positions = <30 31>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
     };
 
     keymap {
