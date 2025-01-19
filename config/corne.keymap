@@ -54,15 +54,17 @@
             ignore-modifiers;
         };
 
-        HOLD_TAP: HOLD_TAP {
+        HYPER_SPACE: HYPER_SPACE {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
+            label = "HYPER_SPACE";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <0>;
             flavor = "tap-preferred";
             retro-tap;
+            require-prior-idle-ms = <200>;
+            quick-tap-ms = <200>;
         };
     };
 
@@ -102,10 +104,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E         &kp R       &kp T                                   &kp Y    &kp U       &kp I          &kp O    &kp P          &kp GRAVE
-&kp LEFT_ALT  &kp A  &kp S  &kp D         &kp F       &kp G                                   &kp H    &kp J       &kp K          &kp L    &kp SEMICOLON  &kp SQT
-&LS_CAPS      &kp Z  &kp X  &kp C         &kp V       &kp B                                   &kp N    &kp M       &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_CONTROL
-                            &kp LEFT_GUI  &ONE_THREE  &HOLD_TAP LS(LC(LA(LEFT_GUI))) SPACE    &kp RET  &TWO_THREE  &kp BACKSPACE
+&kp TAB       &kp Q  &kp W  &kp E         &kp R       &kp T                                      &kp Y    &kp U       &kp I          &kp O    &kp P          &kp GRAVE
+&kp LEFT_ALT  &kp A  &kp S  &kp D         &kp F       &kp G                                      &kp H    &kp J       &kp K          &kp L    &kp SEMICOLON  &kp SQT
+&LS_CAPS      &kp Z  &kp X  &kp C         &kp V       &kp B                                      &kp N    &kp M       &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_CONTROL
+                            &kp LEFT_GUI  &ONE_THREE  &HYPER_SPACE LS(LC(LA(LEFT_GUI))) SPACE    &kp RET  &TWO_THREE  &kp BACKSPACE
             >;
 
             label = "Base";
